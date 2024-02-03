@@ -1,15 +1,14 @@
-import { exec } from "child_process";
+import fs from "fs";
+import path, { dirname } from "path";
+import { fileURLToPath } from "url";
 
-const initRepoUrl = "";// TODO: crear y añadir repo
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const newProjectFiles = path.join(__dirname, "../../files/newproject");
 
-export function initProject() {
-    exec(`git clone ${initRepoUrl}`, (error, _stdout, _stderr) => {
-        if (error) console.log("Please install git");
-        else {
-            // TODO: cambiar de nombre el titulo del README.md, el del directorio y el del package.json
-            console.log("🚀 Project created!!");
-        }
-    });
+export function initProject(title: string) {
+    const dest = path.join(process.cwd(), title);
+    fs.cpSync(newProjectFiles, dest,{ recursive: true, });
+    // TODO: entrar en el directorio del proyecto (dest) i activar npm install automaticamente
 }
 
 export function installOptionalLibraries() {

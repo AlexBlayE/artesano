@@ -12,8 +12,8 @@ function init(program: Command) {
 
 const initAction = (str, _options) => {
     // Comprovar options
-    initProject();
-    modifyTitles(str);
+    initProject(str);
+    modifyTitles(str);    
     // TODO: mirar si ha escrito algun argumento para instlar librerias externas
 };
 
