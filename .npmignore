@@ -1,0 +1,10 @@
+/src
+/tests
+/.github
+/.git
+.editorconfig
+.eslintignore
+.eslintrc.cjs
+.gitignore
+.jest.config.cjs
+LICENSE
