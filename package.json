@@ -5,6 +5,9 @@
   "type": "module",
   "main": "dist/index.js",
   "bin": "dist/index.js",
+  "repository": {
+    "url": "https://github.com/AlexBlayE/artesano"
+  },
   "scripts": {
     "start": "",
     "prepare": "npm run build",
