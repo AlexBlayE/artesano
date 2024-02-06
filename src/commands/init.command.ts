@@ -16,6 +16,7 @@ const initAction = (str: string | undefined, _options: string[]) => {
         return;
     }
 
+    console.log("Project created");
     initProject(str);
     modifyTitles(str);
 };
