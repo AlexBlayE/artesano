@@ -1,21 +1,32 @@
-import { exec } from "child_process";
+import fs from "fs";
+import path, { dirname } from "path";
+import { fileURLToPath } from "url";
+import Replacer from "../models/Replacer.js";
+import { execSync } from "child_process";
 
-const initRepoUrl = "";// TODO: crear y añadir repo
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const newProjectFiles = path.join(__dirname, "../../files/newproject");
 
-export function initProject() {
-    exec(`git clone ${initRepoUrl}`, (error, _stdout, _stderr) => {
-        if (error) console.log("Please install git");
-        else {
-            // TODO: cambiar de nombre el titulo del README.md, el del directorio y el del package.json
-            console.log("🚀 Project created!!");
-        }
-    });
+/**
+ * Init an artesano project
+ * @param title The name of new project
+ */
+export function initProject(title: string) {
+    const dest = path.join(process.cwd(), title);
+    fs.cpSync(newProjectFiles, dest,{ recursive: true, });// Copy the project from files dir
+    console.log("Please Wait: Installing dependencies");
+    execSync(`npm install --prefix ${dest}`);// Install dependencies
+    console.log("Ok");
 }
 
-export function installOptionalLibraries() {
+/**
+ * Modify the name of the package.json and delete the carets in the dependencies
+ * @param title The name of new project
+ */
+export async function modifyTitles(title: string) {
+    const projectDir = path.join(process.cwd(), title);
+    const packageJsonDir = path.join(projectDir, "package.json");
 
-}
-
-export function modifyTitles(_newTitle: string) {
-    // TODO: acceder al readme, directorio y packagejson y cambiar el titulo por newTItle
+    Replacer.replace(packageJsonDir, /\^/g, "");
+    Replacer.replace(packageJsonDir, /newproject/, title);    
 }

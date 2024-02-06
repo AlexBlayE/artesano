@@ -1,7 +1,7 @@
 import { type Command } from "commander";
 import { initProject, modifyTitles } from "../controllers/init.controller.js";
 
-// EXAMPLE -> artesano init example-name-project -ejs
+// EXAMPLE -> artesano init example-name-project 
 
 function init(program: Command) {
     program
@@ -10,14 +10,14 @@ function init(program: Command) {
         .action(initAction);
 }
 
-const initAction = (str, _options) => {
-    // Comprovar options
-    initProject();
-    modifyTitles(str);
-    // TODO: mirar si ha escrito algun argumento para instlar librerias externas
-};
+const initAction = (str: string | undefined, _options: string[]) => {
+    if (str === undefined || str === "") {// This conditional it's not necessary but 🤷‍♂️
+        console.log("Invalid name argument");
+        return;
+    }
 
-//TODO: crear opciones para que venga con ejs, con jest, cors, helmet, jwt, mongoose, sequelize, https, public (-a, --all es que venga con todo)
-//TODO: crear opciones para que pueda quitar archivos y configuraciones por defecto iniciales como quitar eslint
+    initProject(str);
+    modifyTitles(str);
+};
 
 export default init;
