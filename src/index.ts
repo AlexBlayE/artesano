@@ -15,6 +15,8 @@ program
 init(program);// Make a new project
 make(program);// Make a new module (Router, Controller etc)
 newApi(program);// Make a new API
+// new -> artesano <api_name> new get
+// delete -> artesano <api_name> delete get <get_name>
 // TODO: comando update
 // TODO: comando list -> routes / apis / models 
 
