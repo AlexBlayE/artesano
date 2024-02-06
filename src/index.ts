@@ -15,5 +15,7 @@ program
 init(program);// Make a new project
 make(program);// Make a new module (Router, Controller etc)
 newApi(program);// Make a new API
+// TODO: comando update
+// TODO: comando list -> routes / apis / models 
 
 program.parse();

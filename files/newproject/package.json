@@ -5,12 +5,12 @@
   "main": "jest.config.js",
   "type": "module",
   "scripts": {
-    "start": "",
-    "start:dev": "",
-    "build": "",
-    "build:dev": "",
-    "lint": "",
-    "lint:fix": ""
+    "start": "node dist",
+    "start:dev": "node --watch dist",
+    "build": "tsc",
+    "build:dev": "tsc --watch",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
   },
   "keywords": [],
   "author": "",
