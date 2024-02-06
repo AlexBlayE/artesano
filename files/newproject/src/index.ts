@@ -21,8 +21,8 @@ app.use(helmet());
 // router imports
 
 // routes
-app.use();
-app.use();
+app.use("/api");
+app.use("/web");
 
 app.listen(PORT, () => {
     console.log(`Server init ${process.env.WEB_PORT}`);
