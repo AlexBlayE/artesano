@@ -6,6 +6,12 @@ A modern cli to make and manage modern and secure web applications. 🗺️
 
 ¡¡¡New features: comming soon!!!
 
+## Installation 
+
+``` cli
+npm install -g artesano
+```
+
 ## Examples
 
 To make a new project
