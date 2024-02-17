@@ -4,7 +4,7 @@
 
 A modern cli to make and manage modern and secure web applications. 🗺️
 
-¡¡¡New features: comming soon!!!
+¡¡¡New features: coming soon!!!
 
 ## Installation 
 
