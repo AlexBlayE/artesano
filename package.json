@@ -1,11 +1,12 @@
 {
   "name": "artesano",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A cli to create express modular project",
   "type": "module",
   "main": "dist/index.js",
   "bin": "dist/index.js",
   "repository": {
+    "type": "git",
     "url": "https://github.com/AlexBlayE/artesano"
   },
   "scripts": {

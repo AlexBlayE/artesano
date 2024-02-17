@@ -10,7 +10,7 @@ const program = new Command();
 program
     .name("artesano")
     .description("A project manager for express apis")
-    .version("1.0.0");
+    .version("1.0.2");
 
 init(program);// Make a new project
 // make(program);// Make a new module (Router, Controller etc)
