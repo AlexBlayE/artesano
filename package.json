@@ -1,6 +1,6 @@
 {
   "name": "artesano",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A cli to create express modular project",
   "type": "module",
   "main": "dist/index.js",
