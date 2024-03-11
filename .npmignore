@@ -8,3 +8,4 @@
 .gitignore
 .jest.config.cjs
 LICENSE
+!/files/*
