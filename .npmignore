@@ -6,6 +6,11 @@
 .eslintignore
 .eslintrc.cjs
 .gitignore
-.jest.config.cjs
+jest.config.js
 LICENSE
-!/files/*
+!files/newproject/.eslintignore
+!files/newproject/.editorconfig
+!files/newproject/.eslintrc.cjs
+!files/newproject/.gitignore
+!files/newproject/jest.config.js
+
